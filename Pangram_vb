@@ -1,0 +1,32 @@
+Sub Main()
+        Dim Str1 As String
+        Dim Found As Boolean
+        Dim NextChar As Char
+        Dim count As Integer
+
+        count = 65
+        Found = False
+        Str1 = " "
+
+        Str1 = Console.ReadLine
+
+        If Len(Str1) >= 26 Then
+            Found = True
+            Str1 = UCase(Str1)
+            For count = 65 To 90
+                NextChar = Chr(count)
+
+                If InStr(Str1, NextChar) = 0 Then
+                    Found = False
+                End If
+            Next
+        End If
+        If Found = False Then
+            Console.WriteLine("not a Valid program")
+        Else
+            Console.WriteLine(" valid program")
+
+        End If
+        Console.ReadKey()
+
+    End Sub
