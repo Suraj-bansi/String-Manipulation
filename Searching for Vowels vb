@@ -1,0 +1,25 @@
+ Sub Main()
+        Dim Vowels As String
+        Dim count As Integer
+        Dim str1 As String
+        Dim NextChar As Char
+
+        Vowels = "AEIOU"
+        count = 0
+        str1 = " "
+
+        str1 = Console.ReadLine
+        str1 = UCase(str1)
+
+        For i = 1 To Len(str1)
+            NextChar = Mid(str1, i, 1)
+            If InStr(Vowels, NextChar) > 0 Then
+                count = count + 1
+            End If
+        Next
+
+        Console.WriteLine(count)
+
+        Console.ReadKey()
+
+    End Sub
