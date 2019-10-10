@@ -1,0 +1,24 @@
+Declare Str1 : String
+Declare Found : Boolean
+Declare NextChar : Char
+Declare Count : Integer
+Count = 0
+Found = False
+Str1 = " "
+Input Str1
+If LEN(Str1)>=26
+Then
+Str1 = UPPER(Str1)
+For count = 65 to 90
+NextChar = CHR(count)
+IF Locate(Str1,NextChar) = 0
+Then
+Found = True
+ENDIF
+ENDIF
+ENDFOR
+If Found = True
+Then
+Output "Valid Pangram"
+Else
+Output " Not a Valid Pangram"
