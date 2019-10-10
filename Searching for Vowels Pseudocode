@@ -1,0 +1,17 @@
+Declare Vowels : String
+Declare Count : integer
+Declare Str1 : String
+Declare NextChar : Char
+Vowels = "AEIOU"
+Str1 = " "
+NextChar = ' '
+Count = 0
+INPUT Str1
+Str1 = UPPER(Str1)
+For i = 1 to LEN(Str1)
+NextChar = MID(Str1,i,1)
+IF Locate(Vowels,NextChar) > 0
+Then Count = Count + 1
+Next
+ENDIF
+OUTPUT Count
