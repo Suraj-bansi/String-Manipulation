@@ -1,0 +1,28 @@
+DECLARE Str1 : STRING
+DECLARE Str2 : STRING
+DECLARE Str3 : STRING
+DECLARE firstword : STRING
+DECLARE lastword : STRING
+DECLARE Sp : INTEGER
+
+Str1 = " "
+Str2 = " "
+Str3 = " "
+firstword = " "
+lastword = " "
+Sp = 0
+
+OUTPUT "Enter your first set of 2 words: "
+INPUT Str1
+
+OUTPUT "Enter your second set of 2 words: "
+INPUT Str2
+
+Sp = LOCATE (Str1, ' ')
+firstword = LEFT (Str1, Sp  -1)
+
+Sp = LOCATE (Str2, ' ')
+lastword = RIGHT (Str2, LENGTH(Str2)-Sp)
+
+Str3 = firstword & ' ' & lastword
+OUTPUT Str3
