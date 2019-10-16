@@ -7,10 +7,10 @@
         Str3 = " "
         Sp = 0
 
-        Console.Write("Enter your first set of 2 words: ")
+        Console.Write("Enter the name: ")
         Str1 = Console.ReadLine
 
-        Console.Write("Enter your second set of 2 words: ")
+        Console.Write("Enter the second name")
         Str2 = Console.ReadLine
 
         Sp = Instr(Str1 , ' ')
