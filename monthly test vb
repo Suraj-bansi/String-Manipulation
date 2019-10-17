@@ -1,0 +1,116 @@
+Sub Main()
+        Dim validbinarystring As Boolean
+        Dim validstring As String
+        Dim str1 As String
+        Dim str2 As Integer
+        Dim nextchar As Char
+        Dim count As Integer
+        Dim num1 As Integer
+        Dim num2 As Integer
+        Dim num3 As Integer
+        Dim num4 As Integer
+        Dim num5 As Integer
+        Dim num6 As Integer
+        Dim num7 As Integer
+        Dim num8 As Integer
+        Dim worth As Integer
+        Dim Denarynum As Integer
+
+        str1 = " "
+        str2 = 0
+        validbinarystring = False
+        count = 0
+        validstring = "01"
+        num1 = 0
+        num2 = 0
+        num3 = 0
+        num4 = 0
+        num5 = 0
+        num6 = 0
+        num7 = 0
+        num8 = 0
+        worth = 0
+        Denarynum = 0
+
+        Console.WriteLine(" Enter a Binary Number : ")
+        str1 = Console.ReadLine
+
+        str2 = Len(str1)
+        If str2 < 0 And str2 >= 8 Then
+            validbinarystring = True
+        Else
+            validbinarystring = False
+        End If
+
+        For count = 1 To Len(str1)
+            nextchar = Mid(str1, count, 1)
+            If InStr(validstring, nextchar) > 0 Then
+                validbinarystring = True
+            Else
+                validbinarystring = False
+            End If
+        Next
+
+        If validbinarystring = False Then
+            Console.WriteLine(" Not a valid binary Number ")
+        End If
+
+        Console.WriteLine(" ReEnter your binary number : ")
+        str1 = Console.ReadLine
+
+        If nextchar = Right(str1, 1) Then
+            num1 = Val(nextchar)
+            worth = 1
+            num1 = num1 * worth
+        End If
+
+        If nextchar = Mid(str1, 7, 1) Then
+            num2 = Val(nextchar)
+            worth = 2
+            num2 = num2 * worth
+        End If
+
+        If nextchar = Mid(str1, 6, 1) Then
+            num3 = Val(nextchar)
+            worth = 4
+            num3 = num3 * worth
+        End If
+
+        If nextchar = Mid(str1, 5, 1) Then
+            num4 = Val(nextchar)
+            worth = 8
+            num4 = num4 * worth
+        End If
+
+        If nextchar = Mid(str1, 4, 1) Then
+            num5 = Val(nextchar)
+            worth = 16
+            num5 = num5 * worth
+        End If
+
+        If nextchar = Mid(str1, 3, 1) Then
+            num6 = Val(nextchar)
+            worth = 32
+            num6 = num6 * worth
+        End If
+
+        If nextchar = Mid(str1, 2, 1) Then
+            num7 = Val(nextchar)
+            worth = 64
+            num7 = num7 * worth
+        End If
+
+        If nextchar = Left(str1, 1) Then
+            num8 = Val(nextchar)
+            worth = 128
+            num8 = num8 * worth
+        End If
+
+        Denarynum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8
+
+        Console.WriteLine("Your denary value is :")
+        Console.WriteLine(Denarynum)
+
+        Console.ReadKey()
+
+    End Sub
