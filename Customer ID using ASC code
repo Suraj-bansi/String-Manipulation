@@ -1,0 +1,27 @@
+Sub Main()
+        Dim Surname As String
+        Dim CustomerID As Integer
+        Dim I As Integer
+        Dim NextChar As Char
+        Dim NextCodeNumber As Integer
+
+        Surname = " "
+        CustomerID = 0
+        I = 0
+        NextChar = " "
+        NextCodeNumber = 0
+
+        Console.WriteLine(" Enter Surname of the customer ")
+        Surname = Console.ReadLine
+
+        For I = 1 To Len(Surname)
+            NextChar = Mid(Surname, I, 1)
+            NextCodeNumber = Asc(NextChar)
+            CustomerID = CustomerID + NextCodeNumber
+        Next
+
+        Console.WriteLine(" Customer ID is = " & CustomerID)
+
+        Console.ReadKey()
+
+    End Sub
