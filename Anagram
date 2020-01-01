@@ -1,0 +1,31 @@
+
+    Sub Main()
+        Dim str1 As String
+        Dim alpha As Char
+        Dim count As Integer
+        Dim x As Integer
+        Dim y As Integer
+        Dim z As String
+
+        str1 = " "
+        alpha = " "
+        count = 0
+        x = 0
+        y = 0
+        z = " "
+
+        Console.WriteLine(" Enter the sentence for which you want to produce anagram for ")
+        str1 = Console.ReadLine
+
+        For count = 1 To Len(str1)
+            alpha = Mid(str1, count, 1)
+            x = Val(UCase(alpha))
+            y = (Int(Rnd(x) * 10) + 1)
+            z = Str(y)
+        Next
+
+        Console.WriteLine(z)
+
+        Console.ReadKey()
+
+    End Sub
